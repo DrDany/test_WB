@@ -140,7 +140,7 @@ class TestCheck(unittest.TestCase):
 
     def test_update_row(self):
         """
-        update row where customerID = 1 set CustomerName = Ahper and select this row
+        update row where customerID = 1 set CustomerName = Jonh and select this row
         """
         self.browser.execute_script(JS_UPDATE)
         self.browser.find_element_by_class_name("w3-green").click()
