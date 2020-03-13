@@ -1,0 +1,6 @@
+../.idea/
+.pyc*
+venv/
+screenshots/
+trash.py
+.pytest_cache/
