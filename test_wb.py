@@ -43,12 +43,21 @@ JS_SELECT_UPDATE = (
     "(\"select * from Customers where CustomerName = 'Jonh'\")"
 )
 
+capabilities = {
+    "browserName": "chrome",
+    "browserVersion": "84.0",
+    "selenoid:options": {
+        "enableVNC": True,
+        "enableVideo": False
+    }
+}
 
 class TestCheck(unittest.TestCase):
     """test class"""
 
     def setUp(self) -> None:
-        self.browser = webdriver.Chrome()
+        self.browser = webdriver.Remote(
+            command_executor="http://localhost:4444/wd/hub", desired_capabilities=capabilities)
         self.browser.get(START_URL)
         self.browser.maximize_window()
         self.wait = WebDriverWait(self.browser, 10)
