@@ -1,0 +1,15 @@
+{
+    "chrome": {
+        "default": "85.0",
+        "versions": {
+            "84.0": {
+                "image": "selenoid/vnc:chrome_85.0",
+                "port": "4444",
+                "env": [
+                    "TZ=Asia/Nicosia",
+                    "QUIET=true"
+                ],
+             }
+        }
+    }
+}
