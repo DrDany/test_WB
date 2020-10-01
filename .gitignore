@@ -1,5 +1,5 @@
 .idea
-*.yml
+*.iml
 .pyc*
 venv/
 screenshots/
