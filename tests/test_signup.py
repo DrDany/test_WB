@@ -8,11 +8,11 @@ import pytest
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from base.helper import Helper
+from base import helper
 
-USERNAME = Helper.make_username()
+USERNAME = helper.make_username()
 PASSWORD = 'test12345'
-EMAIL = Helper.make_email()
+EMAIL = helper.make_email()
 START_URL = 'https://livexp.dev'
 
 capabilities = {
