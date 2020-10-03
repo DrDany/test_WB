@@ -2,13 +2,15 @@ from faker import Faker
 fake = Faker()
 password = 'test12345'
 
-def make_username():
 
-    username = fake.profile(fields=['username'])['username']
-    return username
+class Helper:
+    def make_username():
 
-def make_email():
+        username = fake.profile(fields=['username'])['username']
+        return username
 
-    email = fake.email()
-    return email
+    def make_email():
+
+        email = fake.email()
+        return email
 
