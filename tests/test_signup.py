@@ -13,7 +13,7 @@ from base import helper
 USERNAME = helper.make_username()
 PASSWORD = 'test12345'
 EMAIL = helper.make_email()
-START_URL = 'https://livexp.dev'
+START_URL = 'https://livexp.com'
 
 capabilities = {
     "browserName": "chrome",
@@ -40,6 +40,7 @@ class TestWB:
     @allure.epic('Live XP')
     @allure.feature('Sign Up')
     @allure.testcase('usr success sign up')
+    @allure.attachment_type()
     def test_all_rows(self):
         """
         Sign up and check user
@@ -47,7 +48,6 @@ class TestWB:
         signup_button = self.browser.find_element_by_xpath("//span[contains(text(),'Sign up')]")
         signup_button.click()
         time.sleep(3)
-
 
         username_input = self.browser.find_element_by_xpath("//input[@name='login']")
         email_input = self.browser.find_element_by_xpath("//input[@name='email']")
@@ -61,6 +61,7 @@ class TestWB:
             "//button[@type='submit']/span[contains(text(),'Sign up')]")
         signin_button.click()
         time.sleep(3)
+        self.browser.get_screenshot_as_png('test_screenshow')
 
 
 if __name__ == "__main__":
